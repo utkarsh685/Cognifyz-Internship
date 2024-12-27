@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 16px;
+            background-color: burlywood;
+        }
+        button {
+            cursor: pointer;
+            background-color: yellowgreen;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <h2>Basic Calculator</h2>
+    <p>Enter two numbers to add them together:</p>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <br>
+    <input type="number" id="number2" placeholder="Enter second number">
+    <br>
+    <button id="calculateButton">Calculate</button>
+    <p class="result" id="result"></p>
+
+    <script>
+        document.getElementById('calculateButton').addEventListener('click', () => {
+            // Get the values of the input fields
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+
+            // Validate input
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').textContent = 'Please enter valid numbers!';
+            } else {
+                // Calculate the sum
+                const sum = num1 + num2;
+
+                // Display the result
+                document.getElementById('result').textContent = `The sum is: ${sum}`;
+            }
+        });
+    </script>
+</body>
+</html>

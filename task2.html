@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <h2>Basic Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button id="calculateButton">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        const calculateButton = document.getElementById('calculateButton');
+        calculateButton.addEventListener('click', () => {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerText = 'Please enter valid numbers!';
+            } else {
+                const sum = num1 + num2;
+                document.getElementById('result').innerText = `The sum is: ${sum}`;
+            }
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Based Greeting</title>
+</head>
+<body>
+    <button id="greetButton">Greet Me</button>
+
+    <script>
+        const greetButton = document.getElementById('greetButton');
+        greetButton.addEventListener('click', () => {
+            const now = new Date();
+            const hour = now.getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = 'Good Morning!';
+            } else if (hour < 18) {
+                greeting = 'Good Afternoon!';
+            } else {
+                greeting = 'Good Evening!';
+            }
+
+            alert(greeting);
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <h2>Basic Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button id="calculateButton">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        const calculateButton = document.getElementById('calculateButton');
+        calculateButton.addEventListener('click', () => {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerText = 'Please enter valid numbers!';
+            } else {
+                const sum = num1 + num2;
+                document.getElementById('result').innerText = The sum is: ${sum};
+            }
+        });
+    </script>
+</body>
+</html>

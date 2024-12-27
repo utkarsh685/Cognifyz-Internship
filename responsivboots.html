@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+    .grid-container {
+      margin-top: 50px;
+    }
+    .grid-item {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #333;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .grid-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+    .grid-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .grid-item h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+    .grid-item p {
+      font-size: 0.9rem;
+      margin: 0 10px 10px;
+    }
+    .btn-custom {
+      background-color: #2575fc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      margin: 10px;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container grid-container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x150" alt="Item 1">
+          <div class="p-3">
+            <h3>Grid Item 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="btn btn-custom">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x150" alt="Item 2">
+          <div class="p-3">
+            <h3>Grid Item 2</h3>
+            <p>Suspendisse potenti. Donec convallis nulla vel arcu.</p>
+            <button class="btn btn-custom">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x150" alt="Item 3">
+          <div class="p-3">
+            <h3>Grid Item 3</h3>
+            <p>Etiam vitae urna eget erat condimentum fermentum.</p>
+            <button class="btn btn-custom">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
